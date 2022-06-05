@@ -1,0 +1,23 @@
+<app-global-menu (greetEvent)="greet($event)"></app-global-menu>
+
+<!-- greet(){
+  alert('Hello shibin from parent')
+} -->
+<h1>{{ greet.name }}</h1>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">COUNTRY</th>
+      <th scope="col">CITY</th>
+      <th scope="col">TO. NO. CUSTOMERS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customerList">
+      <th scope="col">{{ customer.country }}</th>
+      <td>{{ customer.city }}</td>
+      <td>{{ customer.count }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- <p> {{item}}</p> -->
